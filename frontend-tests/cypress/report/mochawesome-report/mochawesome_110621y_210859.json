@@ -1,0 +1,182 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-11-06T20:07:55.375Z",
+    "end": "2021-11-06T20:08:59.321Z",
+    "duration": 63946,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c2745505-2407-427a-a522-9b7718c2f006",
+      "title": "",
+      "fullFile": "cypress/integration/regression-testing.spec.js",
+      "file": "cypress/integration/regression-testing.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c38d1ad3-8217-4776-9b4d-55e651ceb9ab",
+          "title": "Regression testing suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Navigate all the pages",
+              "fullTitle": "Regression testing suite Navigate all the pages",
+              "timedOut": null,
+              "duration": 37033,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "dashboard.viewRooms('Rooms');\nroom.checkCreatePage('New Room');\nroom.checkEditPage('Room: ');\nroom.backToDashboard('Tester Hotel Overview');\ndashboard.viewClients('Clients');\nclient.checkCreatePage('New Client');\nclient.checkEditPage('Client: ');\nclient.backToDashboard('Tester Hotel Overview');\ndashboard.viewBills('Bills');\nbill.checkCreatePage('New Bill');\nbill.checkEditPage('Bill: ');\nbill.backToDashboard('Tester Hotel Overview');\ndashboard.viewReservations('Reservations');\nreservation.checkCreatePage('New Reservation');\nreservation.checkEditPage('Reservation: ');\nreservation.backToDashboard('Tester Hotel Overview');",
+              "err": {},
+              "uuid": "eed3bd58-4ee1-41e5-8f57-1ebf3057bfb3",
+              "parentUUID": "c38d1ad3-8217-4776-9b4d-55e651ceb9ab",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Create and delete room",
+              "fullTitle": "Regression testing suite Create and delete room",
+              "timedOut": null,
+              "duration": 5550,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "let category = 0;\nlet floorNmbr = '5';\nlet roomNmbr = '501';\nlet available = true;\nlet price = '1000';\nlet features = [1, 2];\ndashboard.viewRooms('Rooms');\nroom.createRoom(category, floorNmbr, roomNmbr, available, price, features, 'New Room');\nroom.deleteRoom();\nroom.backToDashboard('Tester Hotel Overview');",
+              "err": {},
+              "uuid": "13a3d45b-57a3-40bf-b32a-a20a0559a5e2",
+              "parentUUID": "c38d1ad3-8217-4776-9b4d-55e651ceb9ab",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Create and delete client",
+              "fullTitle": "Regression testing suite Create and delete client",
+              "timedOut": null,
+              "duration": 5033,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "let name = 'testname';\nlet email = 'test@mail.com';\nlet phone = '070-1234567';\ndashboard.viewClients('Clients');\nclient.createClient(name, email, phone, 'New Client');\nclient.deleteClient();\nclient.backToDashboard('Tester Hotel Overview');",
+              "err": {},
+              "uuid": "63a80483-d4c0-4ef7-96da-ed84194d143a",
+              "parentUUID": "c38d1ad3-8217-4776-9b4d-55e651ceb9ab",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Create and delete bill",
+              "fullTitle": "Regression testing suite Create and delete bill",
+              "timedOut": null,
+              "duration": 4055,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "let value = '1500';\nlet paid = true;\ndashboard.viewBills('Bills');\nbill.createBill(value, paid, 'New Bill');\nbill.deleteBill();\nbill.backToDashboard('Tester Hotel Overview');",
+              "err": {},
+              "uuid": "1c460ae5-7d53-48ea-9893-09e21d4b1270",
+              "parentUUID": "c38d1ad3-8217-4776-9b4d-55e651ceb9ab",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Create and delete reservation",
+              "fullTitle": "Regression testing suite Create and delete reservation",
+              "timedOut": null,
+              "duration": 5518,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "let start = '2020-06-23';\nlet end = '2020-07-01';\nlet client = 1;\nlet room = 1;\nlet bill = 1;\ndashboard.viewReservations('Reservations');\nreservation.createReservation(start, end, client, room, bill, 'New Reservation');\nreservation.deleteReservation();\nreservation.backToDashboard('Tester Hotel Overview');",
+              "err": {},
+              "uuid": "cc97813a-ff53-4a82-af37-d908f4d0de85",
+              "parentUUID": "c38d1ad3-8217-4776-9b4d-55e651ceb9ab",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "eed3bd58-4ee1-41e5-8f57-1ebf3057bfb3",
+            "13a3d45b-57a3-40bf-b32a-a20a0559a5e2",
+            "63a80483-d4c0-4ef7-96da-ed84194d143a",
+            "1c460ae5-7d53-48ea-9893-09e21d4b1270",
+            "cc97813a-ff53-4a82-af37-d908f4d0de85"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 57189,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/report/mochawesome-report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "timestamp": "mmddyyy_HHMMss"
+      },
+      "version": "6.0.1"
+    }
+  }
+}
